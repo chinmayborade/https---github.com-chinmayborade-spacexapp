@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spacexapp/pages/intro_pages.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -48,12 +49,12 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "lets get you to the moon",
                   style: GoogleFonts.exo2(
-                      fontSize: 60,
-                      fontWeight: FontWeight.w300,
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
                       color: const Color.fromRGBO(255, 255, 255, 1)),
                 ),
 
-                SizedBox(height: 70),
+                SizedBox(height: 80),
 
                 //button
                 Container(
@@ -67,7 +68,12 @@ class _HomePageState extends State<HomePage> {
                         Icons.arrow_forward,
                         color: Colors.white,
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Intropage()));
+                      }),
                 )
               ],
             ),
